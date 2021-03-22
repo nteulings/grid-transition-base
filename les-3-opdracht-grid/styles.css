@@ -1,0 +1,79 @@
+    .grid-container{
+        background-color: rgb(253,236,211);
+        padding: 16px;
+        display: grid;
+        row-gap: 16px;
+        column-gap: 16px;
+        grid-template-columns:1fr;
+        grid-template-rows: 50px auto 50px 50px 50px 50px 50px;
+        grid-template-areas:
+                                "A"
+                                "B"
+                                "C"
+                                "D"
+                                "E"
+                                "G"
+                                "F";
+    }
+
+    @media screen and (min-width: 576px) {
+        .grid-container {
+            grid-template-columns: 1fr 1fr 1fr;
+            grid-template-rows: 50px 190px 100px auto 50px;
+            grid-template-areas:
+                            "A C C"
+                            "B C C"
+                            "B E D"
+                            "B E G"
+                            "F F F";
+        }
+    }
+
+    .grid-item{
+        padding: 16px;
+        color: white;
+        display:flex;
+        flex-direction: row;
+        align-items:center;
+        justify-content: center;
+    }
+
+    #grid-A{
+        background-color: red;
+        grid-area: A;
+        border: 1px solid rgb(127,31,42);
+    }
+
+    #grid-B{
+        background-color: red;
+        grid-area: B;
+        border: 1px solid rgb(127,31,42);
+    }
+
+    #grid-C{
+        background-color: red;
+        grid-area: C;
+        border: 1px solid rgb(127,31,42);
+    }
+
+    #grid-D{
+        background-color: red;
+        grid-area: D;
+        border: 1px solid rgb(127,31,42);
+    }
+
+    #grid-E{
+        background-color: red;
+        grid-area: E;
+        border: 1px solid rgb(127,31,42);
+    }
+
+    #grid-F{
+        background-color: red;
+        grid-area: F;
+        border: 1px solid rgb(127,31,42);
+    }
+
+    #dynamic{
+        grid-area: G;
+    }
